@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}My Portfolio{% endblock %}</title>
+
+  <!-- 1. The Core Tailwind CDN Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 2. Tailwind Configuration Custom Tokens (Patched & Cleaned) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Poppins", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          colors: {
+            devBody: "#121e29",
+            devAccentDark: "#401e1b",
+            devButtonYellow: "#f3c33a",
+            devButton: "#e58679",
+            devLightText: "#eee",
+            bordercolor: "#2b6202",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- 3. Google Fonts API Delivery Addresses (Fully Restored & Operational) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://googleapis.com" rel="stylesheet" />
+</head>
+
+<body class="bg-[#121e29] min-h-screen flex flex-col justify-between">
+  <!-- Global background color with flex layout ensuring sticky footer matching -->
+
+  <!-- Fixed Sticky Navigation Container -->
+  <nav
+    class="w-full bg-[#080f14]/90 backdrop-blur-md border-b border-gray-800 text-white font-sans font-semibold sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Brand Title Area (Left Side Logo Placement) -->
+        <div class="flex-shrink-0">
+          <a href="{% url 'home' %}"
+            class="text-lg font-bold tracking-wider hover:text-[#e58679] transition-colors duration-300">
+            Saima Kousar<span class="text-[#e58679]">.</span>
+          </a>
+        </div>
+
+        <!-- LARGE SCREEN NAVIGATION LINKS (Hidden on mobile devices, visible on medium displays up) -->
+        <div class="hidden md:flex items-center gap-2 text-sm tracking-wide">
+          <a href="{% url 'home' %}"
+            class="hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-2 rounded-xl transition-all duration-300">Home</a>
+          <a href="{% url 'about' %}"
+            class="hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-2 rounded-xl transition-all duration-300">About</a>
+          <a href="{% url 'services' %}"
+            class="hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-2 rounded-xl transition-all duration-300">Services</a>
+          <a href="{% url 'contact' %}"
+            class="hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-2 rounded-xl transition-all duration-300">Contact</a>
+        </div>
+
+        <!-- RESPONSIVE HAMBURGER ACTION MENU (Pure Tailwind CSS Hack - No JS Required) -->
+        <div class="flex items-center md:hidden">
+          <!-- Hidden toggle state tracking anchor -->
+          <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+          <!-- Toggle Trigger Button Icon Wrapper -->
+          <label for="menu-toggle"
+            class="p-2 rounded-xl text-gray-400 hover:text-white hover:bg-[#0f1922] cursor-pointer select-none transition-colors duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </label>
+
+          <!-- MOBILE SCREEN DROPDOWN LINKS PANEL -->
+          <!-- Peer visibility tracking element: expands vertically when checkbox is active -->
+          <div
+            class="absolute top-16 left-0 w-full bg-[#080f14] border-b border-gray-800 hidden peer-checked:flex flex-col px-4 pt-2 pb-4 gap-1 shadow-2xl transition-all duration-300">
+            <a href="{% url 'home' %}"
+              class="block hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-3 rounded-xl text-sm transition-all duration-300">Home</a>
+            <a href="{% url 'about' %}"
+              class="block hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-3 rounded-xl text-sm transition-all duration-300">About</a>
+            <a href="{% url 'services' %}"
+              class="block hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-3 rounded-xl text-sm transition-all duration-300">Services</a>
+            <a href="{% url 'contact' %}"
+              class="block hover:bg-[#e58679]/10 hover:text-[#e58679] px-4 py-3 rounded-xl text-sm transition-all duration-300">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Injection Wrapper Frame -->
+  <main class="w-full flex-grow">
+    {% block content %} {% endblock %}
+  </main>
+
+  <!-- Main Global Footer Wrapper Layout -->
+  <footer class="w-full bg-[#080f14] border-t border-gray-800 text-gray-500 font-sans mt-auto">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+
+        <!-- Left Side: Custom Personalized Inspirational Quote -->
+        <div class="text-sm tracking-wide font-sans">
+          <p class="!text-white font-sans">
+            Believe in your potential<span class="text-[#e58679]"> ~ </span><span
+              class="text-[#e58679] font-mono font-bold">Coder Saima</span>
+          </p>
+        </div>
+
+        <!-- Right Side: Standard Production Copyright Metric -->
+        <div class="text-xs tracking-wider text-gray-600 font-semibold">
+          &copy; {% now "Y" %} Saima Kousar. All rights reserved.
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

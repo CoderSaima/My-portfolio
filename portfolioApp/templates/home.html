@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}Home - Portfolio{% endblock %}
+{% load static %}
+
+{% block content %}
+<!-- 🌟 MAIN HERO WRAPPER -->
+<div
+  class="w-full max-w-6xl mx-auto bg-[#121e29] text-white font-sans min-h-[75vh] mt-6 rounded-2xl flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 py-16 gap-12 relative overflow-hidden">
+
+  <!-- LEFT SIDE: Text Content & Call to Actions -->
+  <div class="w-full md:w-1/2 flex flex-col justify-center space-y-6 z-10">
+    <!-- Main Greeting -->
+    <h2 class="text-5xl font-bold tracking-tight text-white">
+      Hello<span class="text-[#e58679]">.</span>
+    </h2>
+
+    <!-- Decorative Line & Name Row -->
+    <div class="flex items-center gap-4">
+      <div class="bg-[#e58679] w-24 h-0.5 rounded"></div>
+      <div class="text-3xl font-medium tracking-wide text-gray-200">I'm Saima Kousar</div>
+    </div>
+
+    <!-- Profession Title -->
+    <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-wide leading-tight">
+      Software Engineer
+    </h1>
+    <p class="text-xl font-medium tracking-wide text-gray-400">Web Developer</p>
+
+    <!-- ⚡ BUTTON GROUP -->
+    <div class="flex flex-wrap items-center gap-4 pt-6">
+      <!-- Primary filled button -->
+      <a href="{% url 'contact' %}"
+        class="bg-[#e58679] hover:bg-[#d47568] text-white font-semibold px-8 py-3.5 rounded transition-all duration-200 tracking-wide text-center min-w-[160px] w-full sm:w-auto">
+        Got a project?
+      </a>
+      <!-- Secondary outlined button -->
+      <a href="{% url 'about' %}#resume-section"
+        class="border border-[#e58679] text-[#e58679] hover:bg-[#e58679]/10 font-semibold px-8 py-3.5 rounded transition-all duration-200 tracking-wide text-center min-w-[160px] w-full sm:w-auto">
+        My resume
+      </a>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: Profile Image with Decorative Circles -->
+  <div class="w-full md:w-1/2 flex justify-center items-center relative h-[400px]">
+    <!-- Outer Glowing Decorative Circle -->
+    <div
+      class="absolute w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full border-2 border-[#e58679]/20 animate-pulse">
+    </div>
+    <!-- Inner Sharp Accent Circle -->
+    <div
+      class="absolute w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] rounded-full border-4 border-l-[#e58679] border-t-[#e58679] border-r-transparent border-b-transparent rotate-45">
+    </div>
+
+    <!-- Profile Image -->
+    <img src="{% static 'images/picture.jpg' %}"
+      class="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover border-4 border-[#e58679] shadow-2xl relative z-10 bg-[#1a2b3c]"
+      alt="Profile Image">
+    <!-- Subtle background vectors (Left and Right angle markers) -->
+    <span
+      class="absolute left-4 top-1/4 text-[#e58679]/15 text-5xl font-mono select-none pointer-events-none hidden sm:block">&lt;</span>
+    <span
+      class="absolute right-4 bottom-1/4 text-[#e58679]/15 text-5xl font-mono select-none pointer-events-none hidden sm:block">&gt;</span>
+  </div>
+
+</div>
+
+<!-- SKILLS FOOTER RIBBON -->
+<div
+  class="w-full max-w-6xl mx-auto mt-4 px-6 sm:px-12 py-6 bg-[#0f1922] rounded-xl flex flex-wrap justify-between items-center text-sm font-semibold tracking-wider text-gray-500 uppercase gap-4 border border-gray-800/40">
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">Python</span>
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">Django</span>
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">HTML</span>
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">Tailwind CSS</span>
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">Bootstrap</span>
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">Git</span>
+  <span class="hover:text-[#e58679] transition-colors cursor-pointer">Github</span>
+</div>
+{% endblock %}

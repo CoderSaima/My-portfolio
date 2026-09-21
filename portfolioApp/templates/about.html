@@ -1,0 +1,372 @@
+{% extends 'base.html' %} {% block title %}About - Portfolio{% endblock %} {%
+load static %} {% block content %}
+<!-- 🌟 MAIN ABOUT CONTAINER -->
+<div class="bg-[#121e29] text-white font-mono max-w-6xl mx-auto mt-6 rounded-2xl p-8 md:p-16">
+  <!-- MY STORY SECTION -->
+  <div class="md:col-span-2 space-y-6">
+    <h2 class="text-4xl font-bold tracking-tight text-white font-sans mb-6">
+      My Story <span class="text-[#e58679]">.</span>
+    </h2>
+    <div class="space-y-4">
+      <p class="text-xl text-gray-200 font-mono leading-relaxed italic border-l-4 border-[#e58679] pl-4">
+        "Growing up, computers were never my thing..."
+      </p>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        If you had told me a few years ago that I would be a Software Engineer,
+        I wouldn't have believed you. My heart was set on becoming a doctor, and
+        computers honestly didn't interest me. But looking back, I realize that
+        Allah perfectly directed my path to where my true potential could
+        flourish.
+      </p>
+    </div>
+    <div id="story-drawer" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out space-y-6">
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Entering my BSSE degree, terms like 'coding' and 'programming' were an
+        entirely foreign language to me. But sitting in my first-semester
+        programming class, something magical happened.
+      </p>
+
+      <p class="text-gray-300 text-lg leading-relaxed">
+        As I watched logic translate into action, my mind raced with excitement:
+        <b>I think everything is possible now.</b>
+        I became obsessed with going deeper, searching for the roots of
+        structural problems. I still remember the absolute joy of building my
+        first ATM machine workflow seeing how data beautifully flowed from input
+        to output. That was the moment I found true inner satisfaction.
+      </p>
+
+      <p class="text-gray-300 text-lg leading-relaxed">
+        That curiosity quickly became a driving force. From the third semester
+        onwards, I threw myself into web development, cloning existing platforms
+        to master layout and state management. Today, I can confidently build
+        the web from scratch, translating complex backend logic into seamless
+        digital experiences.
+      </p>
+    </div>
+
+    <div class="pt-2">
+      <button id="drawer-btn" onclick="toggleStory()"
+        class="text-[#e58679] hover:text-[#d47568] font-sans font-semibold text-lg inline-flex items-center gap-2 group transition-colors duration-200 focus:outline-none">
+        <span id="btn-text">Read my full journey</span>
+        <span id="btn-arrow"
+          class="transform transition-transform duration-300 group-hover:translate-y-0.5">&darr;</span>
+      </button>
+    </div>
+  </div>
+  <script>
+    function toggleStory() {
+      const drawer = document.getElementById("story-drawer");
+      const btnText = document.getElementById("btn-text");
+      const btnArrow = document.getElementById("btn-arrow");
+      // If the drawer is closed, open it by matching its height to its full internal content size
+      if (drawer.style.maxHeight === "0px" || !drawer.style.maxHeight) {
+        drawer.style.maxHeight = drawer.scrollHeight + "px";
+        btnText.textContent = "Show less";
+        btnArrow.innerHTML = "&uarr;"; // Point arrow up
+      } else {
+        drawer.style.maxHeight = "0px";
+        btnText.textContent = "Read my full journey";
+        btnArrow.innerHTML = "&darr;"; // Point arrow down
+      }
+    }
+  </script>
+
+  <!-- TECH SKILLS SECTION -->
+  <div class="mt-16">
+    <h3 class="text-4xl font-bold text-white font-sans mb-6">
+      Tech Stack <span class="text-[#e58679]">.</span>
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Core Programing stack -->
+      <div class="bg-[#0f1922] p-6 rounded-xl border border-slate-800 shadow-xl">
+        <span class="text-[#fff] text-2xl font-bold block mb-3">&lt;/&gt;</span>
+        <h4 class="text-lg font-bold text-white mb-2">Core Coding Languages</h4>
+        <!-- <p class="text-gray-400 text-sm mb-4">
+          Crafting stable core business logic and efficient routing
+          configurations.
+        </p> -->
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Python</span>
+          <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Django
+            MVT</span>
+          <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">C
+            Programming</span>
+          <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">CPP
+            Programming</span>
+        </div>
+      </div>
+
+      <!-- Frontend Card -->
+      <div class="bg-[#0f1922] p-6 rounded-xl border border-slate-800">
+        <span class="text-[#e58679] text-2xl font-bold block mb-3">🎨</span>
+        <h4 class="text-lg font-bold text-white mb-2">Frontend Systems</h4>
+        <!--<p class="text-gray-400 text-sm mb-4">
+          Replicating premium user interfaces with completely responsive
+          breakpoints.
+        </p>-->
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">HTML5 /
+            CSS3</span>
+          <span
+            class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Tailwind
+            CSS</span>
+          <span
+            class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Bootstrap</span>
+        </div>
+      </div>
+
+      <!-- DevOps / Workflow Card -->
+      <div class="bg-[#0f1922] p-6 rounded-xl border border-slate-800">
+        <span class="text-[#e58679] text-2xl font-bold block mb-3">⚙️</span>
+        <h4 class="text-lg font-bold text-white mb-2">Workflow & Tools</h4>
+        <!--<p class="text-gray-400 text-sm mb-4">
+          Managing version source tracking pipelines and deployment safety
+          controls.
+        </p>-->
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Git</span>
+          <span
+            class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">GitHub</span>
+          <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">VS
+            Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Long Term Goal Block-->
+  <div class="mt-16">
+    <h3 class="text-4xl font-bold text-white font-sans mb-6">
+      Long-Term Goals <span class="text-[#e58679]">.</span>
+    </h3>
+    <p class="text-gray-300 text-lg leading-relaxed">
+      My long-term goal is to grow into a versatile full-stack software engineer
+      who can build and scale entire web applications independently from end to
+      end. I want to expand my capabilities to master both responsive front-end
+      user interfaces and advanced software security. My primary objective is to
+      gain deep technical confidence as a developer, allowing me to take digital
+      products all the way from initial system architecture down to deployment.
+      Ultimately, I aim to use this engineering foundation to build my own
+      independent applications and scale them into a successful technology
+      venture.
+    </p>
+  </div>
+
+  <!-- MY INETERST -->
+  <div class="mt-16">
+    <h3 class="text-4xl font-bold text-white font-sans mb-6">
+      Interests <span class="text-[#e58679]">.</span>
+    </h3>
+    <p class="text-gray-300 text-lg leading-relaxed">
+      To maintain a focused mind and a healthy routine outside of coding, I
+      value creative and active hobbies. I enjoy painting, gardening, and
+      playing badminton. Within my university department, my peers know me as a
+      supportive team member and a good listener.
+    </p>
+  </div>
+
+  <!-- SOCIALS RIBBON 
+<div class="w-full max-w-7xl mx-auto mt-16">
+  <h2 class="text-4xl font-bold tracking-tight text-white font-sans mb-6">
+      My Socials <span class="text-[#e58679]">.</span>
+    </h2>
+  <div class="w-full mt-4 mb-10 px-6 py-6 bg-[#0f1922] rounded-xl flex flex-wrap justify-evenly items-center text-sm font-semibold tracking-wider text-gray-500 gap-6">
+    <span class="hover:text-[#e58679] transition-colors">Email: missKathering@gmail.com</span>
+    
+    <span><a href = "https://github.com/CoderSaima" class="hover:text-[#e58679] transition-colors">Github<a></span>
+    <span><a href = "https://www.linkedin.com/in/saima-kousar-763503364/" class="hover:text-[#e58679] transition-colors">LInkedIn<a></span>
+    <span><a href = "https://www.skills.google/public_profiles/72eb5509-3e99-4877-a6a0-28cb24a2d57b" class="hover:text-[#e58679] transition-colors">Google Skills<a></span>
+    <span><a href = "https://www.credly.com/users/saima-kousar.b36586ee/badges/credly" class="hover:text-[#e58679] transition-colors">Credly<a></span>
+  </div>
+</div>-->
+
+  <!-- Fluid Outer Container -->
+  <div class="w-full max-w-7xl mx-auto mt-16">
+    <!-- Heading Section -->
+    <h2 class="text-4xl font-bold tracking-tight text-white font-sans mb-6">
+      My Socials <span class="text-[#e58679]">.</span>
+    </h2>
+
+    <!-- Balanced Flex Row Container -->
+    <div
+      class="w-full mt-4 mb-10 px-6 py-6 bg-[#0f1922] rounded-xl flex flex-wrap justify-evenly items-center text-sm font-semibold tracking-wider text-gray-500 gap-6">
+      <!-- Email (Non-clickable state or Mailto link alternative) -->
+      <span class="inline-flex items-center gap-2 hover:text-[#e58679] transition-colors cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+          </path>
+        </svg>
+        Email: engrsaimakousar@gmail.com
+      </span>
+
+      <!-- GitHub Link with Icon -->
+      <span>
+        <a href="https://github.com/CoderSaima"
+          class="inline-flex items-center gap-2 hover:text-[#e58679] transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.0.069-.608.1 1.006.543 1.534 1.534 1.534.892 0 1.661-.247 2.196-.602.092-.653.351-1.1.636-1.352-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+            </path>
+          </svg>
+          GitHub
+        </a>
+      </span>
+
+      <!-- LinkedIn Link with Icon -->
+      <span>
+        <a href="https://www.linkedin.com/in/saima-kousar-763503364/"
+          class="inline-flex items-center gap-2 hover:text-[#e58679] transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+            </path>
+          </svg>
+          LinkedIn
+        </a>
+      </span>
+
+      <!-- Google Skills Link with Academic/Cap Icon -->
+      <span>
+        <a href="https://www.skills.google/public_profiles/72eb5509-3e99-4877-a6a0-28cb24a2d57b"
+          class="inline-flex items-center gap-2 hover:text-[#e58679] transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+            </path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path>
+          </svg>
+          Google Skills
+        </a>
+      </span>
+
+      <!-- Credly Link with Certification Badge Icon -->
+      <span>
+        <a href="https://www.credly.com/users/saima-kousar.b36586ee/badges/credly"
+          class="inline-flex items-center gap-2 hover:text-[#e58679] transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+            </path>
+          </svg>
+          Credly
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <!-- MY RESUME SECTION -->
+  <!-- Main Section Container Container -->
+  <div class="w-full max-w-4xl mx-auto px-4 my-10">
+
+    <!-- TOP ROW: Heading and Action Button aligned perfectly across the row -->
+    <div class="flex items-center justify-between mb-6 border-b border-gray-800 pb-4">
+      <h2 class="text-3xl font-bold tracking-tight text-white font-sans">
+        My Resume <span class="text-[#e58679]">.</span>
+      </h2>
+
+      <!-- Clean, balanced Action Button with correct W3C SVG namespace -->
+      <a href="/static/images/Resume.jpg" target="_blank"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-[#e58679] hover:text-white bg-[#0f1922] px-4 py-2 rounded-xl border border-gray-800 hover:border-gray-700/60 shadow-sm transition-all duration-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+        Open in New Tab
+      </a>
+    </div>
+
+    <!-- INTERACTIVE CONTAINER: Full width display frame with controlled viewport height -->
+    <div
+      class="group relative w-full h-[450px] bg-[#0f1922] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 shadow-2xl transition-all duration-500 cursor-zoom-in">
+
+      <!-- The Clean Resume Image: Expands to full screen width, smoothly pans up on hover -->
+      <img src="/static/images/Resume.jpg" alt="Sana Arshad Resume"
+        class="w-full absolute top-0 left-0 object-cover object-top origin-top transition-all duration-[800ms] ease-out group-hover:scale-[1.03] group-hover:-translate-y-[35%]" />
+
+      <!-- Ambient dark bottom gradient that clears up on interactive hover -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#080f14] via-transparent to-transparent opacity-90 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none">
+      </div>
+
+      <!-- Responsive Action Text Badge: Automatically invisible on mobile screens, stays flat on laptops -->
+      <div
+        class="hidden sm:block absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#0f1922]/95 border border-gray-700 text-xs font-semibold tracking-wider text-gray-400 px-5 py-2.5 rounded-full shadow-lg group-hover:opacity-0 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+        Hover to expand details
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Main Parent Container Wrapper -->
+  <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Single Div Wrapper using CSS Grid for the Two Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#0f1922] p-8 rounded-2xl border border-gray-800 shadow-2xl">
+      <!-- LEFT SECTION: MINI CONTACT ME FORM -->
+      <section class="flex flex-col justify-between">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-white mb-2 font-sans">
+            Get In Touch <span class="text-[#e58679]">.</span>
+          </h2>
+          <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+            Have an opportunity or want to collaborate? Drop a message securely.
+          </p>
+        </div>
+
+        <!-- Live HTML/Django Form Element -->
+        <form method="POST" action="" class="space-y-4">
+          <!-- Django Security Token (Uncomment when inside regular views) -->
+          {% csrf_token %}
+
+          <!-- Name Field -->
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1.5">Name</label>
+            <input type="text" name="name" required placeholder="Your name"
+              class="w-full bg-[#080f14] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#e58679] transition-colors duration-300" />
+          </div>
+
+          <!-- Email Field -->
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1.5">Email</label>
+            <input type="email" name="email" required placeholder="yourname@email.com"
+              class="w-full bg-[#080f14] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#e58679] transition-colors duration-300" />
+          </div>
+
+          <!-- Message Field -->
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1.5">Message</label>
+            <textarea name="message" rows="4" required placeholder="Type your message here..."
+              class="w-full bg-[#080f14] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#e58679] transition-colors duration-300 resize-none"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit"
+            class="w-full md:w-auto px-6 py-3 bg-[#e58679] hover:bg-[#d47568] text-white text-sm font-sans tracking-wide rounded-xl shadow-md transition-colors duration-300 active:scale-[0.98]">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      <!-- RIGHT SECTION: RESERVED BLANK SPACE -->
+      <!-- (Perfect for an graphic element, dynamic details, text, or a map layout later) -->
+      <section
+        class="hidden md:flex flex-col items-center justify-center border-l border-gray-800/50 pl-8 min-h-[350px]">
+
+        <!-- Heading Element: Uses !text-white to break the global black text inheritance completely -->
+        <h2 class="text-6xl font-bold tracking-tight !text-white font-sans leading-tight text-center md:text-left">
+          You're
+          <span class="text-[#e58679] block md:inline">Stronger</span>
+          then you
+          <span class="text-[#e58679] block md:inline">THINK</span>
+        </h2>
+      </section>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

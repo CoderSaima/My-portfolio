@@ -1,0 +1,392 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - Portfolio{% endblock %}
+
+{% block content %}
+<!-- Main responsive services container -->
+<div
+  class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-gray-300 font-sans selection:bg-[#e58679] selection:text-white">
+
+  <!-- Header Intro Section -->
+  <section class="mb-12 text-center md:text-left">
+    <h2 class="text-4xl font-bold tracking-tight text-white mb-4">
+      Services I Offer <span class="text-[#e58679]">.</span>
+    </h2>
+  </section>
+
+  <!-- Services Component Grid Box -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- 1. BACKEND WEB DEVELOPMENT -->
+    <section
+      class="bg-[#0f1922] p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:border-gray-700 shadow-xl group">
+      <div>
+        <!-- Responsive Vector Service Icon -->
+        <div
+          class="w-12 h-12 bg-[#080f14] text-[#e58679] rounded-xl flex items-center justify-center mb-5 border border-gray-800 group-hover:border-[#e58679]/40 transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-7-4h.01M11 16h.01">
+            </path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Backend Web Apps</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Python</span>
+        <span
+          class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Django</span>
+      </div>
+    </section>
+
+    <!-- 2. DATABASE SYSTEM DESIGN & MODELING -->
+    <section
+      class="bg-[#0f1922] p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:border-gray-700 shadow-xl group">
+      <div>
+        <div
+          class="w-12 h-12 bg-[#080f14] text-[#e58679] rounded-xl flex items-center justify-center mb-5 border border-gray-800 group-hover:border-[#e58679]/40 transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4">
+            </path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Database Architecture</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">PostgreSQL</span>
+      </div>
+    </section>
+
+    <!-- 3. SECURITY LOGIC & ALGORITHMS -->
+    <section
+      class="bg-[#0f1922] p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:border-gray-700 shadow-xl group">
+      <div>
+        <div
+          class="w-12 h-12 bg-[#080f14] text-[#e58679] rounded-xl flex items-center justify-center mb-5 border border-gray-800 group-hover:border-[#e58679]/40 transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+            </path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Data Security Logic</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Python</span>
+        <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Security
+          Logics</span>
+      </div>
+    </section>
+
+    <section
+      class="bg-[#0f1922] p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 hover:border-gray-700 shadow-xl group">
+      <div>
+        <!-- Responsive Vector Service Icon -->
+        <div
+          class="w-12 h-12 bg-[#080f14] text-[#e58679] rounded-xl flex items-center justify-center mb-5 border border-gray-800 group-hover:border-[#e58679]/40 transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-7-4h.01M11 16h.01">
+            </path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Git and Version Control</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">Git and
+          Github</span>
+        <span class="bg-[#121e29] text-xs text-gray-300 px-2.5 py-1 rounded border border-slate-700 font-mono">VS
+          Code</span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Lower Call to Action Block linking back to your Contact Form -->
+  <section
+    class="mt-12 bg-[#0f1922] p-6 rounded-xl border border-gray-800 text-center flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div class="text-left">
+      <h4 class="text-lg font-bold text-white mb-1">Need a backend developer for a project?</h4>
+    </div>
+    <div>
+      <a href="/contact/"
+        class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#e58679] hover:bg-[#d47568] text-white text-sm font-semibold rounded-xl transition-all duration-300 shadow-md">
+        Get a Quote
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<!-- PORTFOLIO PROJECTS SHOWCASE -->
+<div class="bg-[#121e29] text-white font-sans max-w-6xl mx-auto mt-2 rounded-2xl p-8 md:p-16 space-y-12">
+
+  <!-- Title Area -->
+  <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-6 gap-4">
+    <div>
+      <h2 class="text-4xl font-bold text-sans tracking-tight text-white">
+        My Projects <span class="text-[#e58679]">.</span>
+      </h2>
+    </div>
+    <!-- Link to overall profile 
+        <a href="https://github.com/CoderSaima" target="_blank" class="text-ls uppercase tracking-wider font-mono text-[#e58679] hover:text-[#d47568] flex items-center gap-2 group transition-colors">
+            View all repositories on GitHub <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>-->
+  </div>
+  <!-- PROJECTS GRID DISPLAY -->
+
+  <div
+    class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-300 font-sans selection:bg-[#e58679] selection:text-white">
+
+    <!-- Section Header -->
+    <section class="mb-10 text-center md:text-left">
+      <h2 class="text-2xl font-bold tracking-tight text-white mb-4">
+        Academic Project <span class="text-[#e58679]">.</span>
+      </h2>
+    </section>
+
+    <!-- Single Featured Project Wrapper -->
+    <div
+      class="w-full bg-[#0f1922] p-8 rounded-2xl border border-gray-800 shadow-2xl transition-all duration-300 hover:border-gray-700/80 group">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- LEFT / TOP SIDE: PROJECT INFO (Spans 2 columns) -->
+        <div class="lg:col-span-2 flex flex-col justify-between">
+          <div>
+            <!-- Title & Timeline -->
+            <div class="flex flex-wrap items-center gap-3 mb-3">
+              <h3 class="text-2xl font-bold text-white tracking-tight">
+                Digital Vault
+              </h3>
+              <span
+                class="text-xs font-semibold px-2.5 py-1 bg-[#080f14] rounded-full text-gray-500 border border-gray-800 tracking-wider uppercase">
+                Final Year Project
+              </span>
+            </div>
+
+            <!-- Punchy 3-Sentence Summary -->
+            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+              A secure digital legacy management system designed to safely store and automate the transition of
+              sensitive personal credentials and assets. The application serves as an independent, encrypted vault for
+              users to log passwords, documents, and private instructions. Built within a collaborative three-member
+              development team, the platform bridges clean relational storage structures with dedicated cryptographic
+              server-side validation layers.
+            </p>
+
+            <!-- Explicit Backend Boundaries Block (Highly Professional) -->
+            <div class="bg-[#080f14] border border-gray-800/80 p-4 rounded-xl mb-6">
+              <h4 class="text-xs font-bold uppercase tracking-widest text-[#e58679] mb-1.5">My Development Focus</h4>
+              <p class="text-xs text-gray-400 leading-relaxed">
+                Operated strictly as the core backend developer and encryption handler. While my co-developer mapped the
+                schema views and relational tables in PostgreSQL, I took full ownership of coding the security script
+                logic using Python and Django. I successfully implemented a Zero-Knowledge Architecture, ensuring all
+                user data becomes fully encrypted on the server level before entering storage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tech Stack Badges Bubble Row -->
+          <div class="flex flex-wrap gap-2.5 mb-6 lg:mb-0">
+            <span
+              class="text-xs font-mono font-medium px-2.5 py-1 bg-[#080f14] rounded text-gray-400 border border-gray-800">Python</span>
+            <span
+              class="text-xs font-mono font-medium px-2.5 py-1 bg-[#080f14] rounded text-gray-400 border border-gray-800">Django
+              Framework</span>
+            <span
+              class="text-xs font-mono font-medium px-2.5 py-1 bg-[#080f14] rounded text-gray-400 border border-gray-800">PostgreSQL</span>
+            <span
+              class="text-xs font-mono font-medium px-2.5 py-1 bg-[#080f14] rounded text-gray-400 border border-gray-800">Cryptographic
+              Logic</span>
+            <span
+              class="text-xs font-mono font-medium px-2.5 py-1 bg-[#080f14] rounded text-gray-400 border border-gray-800">Git/GitHub</span>
+          </div>
+        </div>
+
+        <!-- RIGHT / BOTTOM SIDE: REPOSITORY ACTIONS & SUMMARY META -->
+        <div
+          class="flex flex-col justify-center bg-[#080f14]/50 border border-gray-800/60 p-6 rounded-xl min-h-[200px] lg:min-h-auto">
+          <div class="text-center space-y-5">
+            <div class="text-xs text-gray-500 uppercase tracking-widest font-semibold">
+              Repository Actions
+            </div>
+
+            <!-- GitHub Code Navigation Button -->
+            <a href="https://github.com/AlinaNo0r/AfterLife/tree/main/FYP" target="_blank"
+              class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#e58679] hover:bg-[#d47568] text-white text-sm font-semibold rounded-xl transition-all duration-300 shadow-md active:scale-[0.98]">
+              <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.0.069-.608.1 1.006.543 1.534 1.534 1.534.892 0 1.661-.247 2.196-.602.092-.653.351-1.1.636-1.352-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z">
+                </path>
+              </svg>
+              Explore Source Code
+            </a>
+
+            <!-- Live Preview / Presentation Anchor (Optional fallback link) -->
+            <a href="https://docs.google.com/document/d/1H8CLyuBe6H1USU3n8RRaIpT9PIusxcRyGHtT2oVwJWM/edit?tab=t.0"
+              class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#080f14] border border-gray-800 hover:border-gray-700 text-gray-400 hover:text-white text-sm font-semibold rounded-xl transition-all duration-300">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                </path>
+              </svg>
+              Project Documentation
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <section class="mb-10 text-center md:text-left">
+      <h2 class="text-2xl font-bold mt-10 tracking-tight text-white mb-4">
+        Independent Web App Projects <span class="text-[#e58679]">.</span>
+      </h2>
+    </section>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Project 1: The ATM Procedural Logic -->
+      <div
+        class="bg-[#0f1922] border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-[#e58679]/30 transition-all duration-300 group">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#e58679] bg-[#e58679]/10 px-2.5 py-1 rounded">Python Core</span>
+            <span class="text-gray-600 text-xs font-mono">#01 Project Milestone</span>
+          </div>
+          <h3 class="text-xl font-bold text-white group-hover:text-[#e58679] transition-colors">CLI based secure Note
+            Locker</h3>
+          <!--  <p class="text-gray-400 text-sm leading-relaxed">
+                    A foundational 100-line C/Python procedural workflow mapping a banking automated teller terminal. Traces precise account data inputs, verification validation loops, and dynamic balance workflows.
+                </p>-->
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span
+              class="bg-[#121e29] text-xs text-gray-400 px-2 py-0.5 rounded border border-slate-800 font-mono">Python</span>
+            <span class="bg-[#121e29] text-xs text-gray-400 px-2 py-0.5 rounded border border-slate-800 font-mono">Data
+              Encryption</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons Matrix -->
+        <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-800/60">
+          <!-- Code Base Redirect Link -->
+          <a href="https://github.com/CoderSaima/CLI-note-locker" target="_blank"
+            class="flex-1 bg-slate-800/40 hover:bg-[#e58679]/10 border border-slate-700/50 hover:border-[#e58679]/40 text-center font-semibold text-sm py-2.5 rounded transition-all duration-200">
+            Source Code
+          </a>
+          <!-- Optional Video Demo Link 
+                <a href="#" target="_blank" class="flex-1 border border-transparent hover:border-slate-800 text-[#e58679] text-center font-semibold text-sm py-2.5 rounded transition-colors duration-200">
+                    View Demo Video &darr;
+                </a>-->
+        </div>
+      </div>
+
+      <!-- Project 2: High-End Landing Page Clone -->
+      <div
+        class="bg-[#0f1922] border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-[#e58679]/30 transition-all duration-300 group shadow-lg">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-[#e58679] bg-[#e58679]/10 px-2.5 py-1 rounded">Full-Stack
+              Interface</span>
+            <span class="text-gray-600 text-xs font-mono">#02 Project Milestone</span>
+          </div>
+          <h3 class="text-xl font-bold text-white group-hover:text-[#e58679] transition-colors">Portfolio Web App</h3>
+          <!--<p class="text-gray-400 text-sm leading-relaxed">
+                    A pixel-perfect UI replication built during my 3rd semester to master complex grid layers, flex container spacing rules, structural layouts, and responsive cross-device breakpoint views.
+                </p>-->
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span
+              class="bg-[#121e29] text-xs text-gray-400 px-2 py-0.5 rounded border border-slate-800 font-mono">Python</span>
+            <span
+              class="bg-[#121e29] text-xs text-gray-400 px-2 py-0.5 rounded border border-slate-800 font-mono">Django
+              (MVT)</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons Matrix -->
+        <div class="flex items-center gap-4 pt-6 mt-6 border-t border-slate-800/60">
+          <a href="https://github.com/Clone-Project-Repo-Name" target="_blank"
+            class="flex-1 bg-slate-800/40 hover:bg-[#e58679]/10 border border-slate-700/50 hover:border-[#e58679]/40 text-center font-semibold text-sm py-2.5 rounded transition-all duration-200">
+            Source Code
+          </a>
+          <!--<a href="#" target="_blank" class="flex-1 text-slate-400 hover:text-white text-center font-semibold text-sm py-2.5 rounded transition-colors duration-200">
+                    Live Link &rarr;-->
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Main Parent Container Wrapper -->
+  <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Single Div Wrapper using CSS Grid for the Two Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#0f1922] p-8 rounded-2xl border border-gray-800 shadow-2xl">
+      <!-- LEFT SECTION: MINI CONTACT ME FORM -->
+      <section class="flex flex-col justify-between">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-white mb-2 font-sans">
+            Get In Touch <span class="text-[#e58679]">.</span>
+          </h2>
+          <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+            Have an opportunity or want to collaborate? Drop a message securely.
+          </p>
+        </div>
+
+        <!-- Live HTML/Django Form Element -->
+        <form method="POST" action="#" class="space-y-4">
+          <!-- Django Security Token (Uncomment when inside regular views) -->
+          <!-- {% csrf_token %} -->
+
+          <!-- Name Field -->
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1.5">Name</label>
+            <input type="text" name="name" required placeholder="Your name"
+              class="w-full bg-[#080f14] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#e58679] transition-colors duration-300" />
+          </div>
+
+          <!-- Email Field -->
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1.5">Email</label>
+            <input type="email" name="email" required placeholder="yourname@email.com"
+              class="w-full bg-[#080f14] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#e58679] transition-colors duration-300" />
+          </div>
+
+          <!-- Message Field -->
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1.5">Message</label>
+            <textarea name="message" rows="4" required placeholder="Type your message here..."
+              class="w-full bg-[#080f14] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#e58679] transition-colors duration-300 resize-none"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit"
+            class="w-full md:w-auto px-6 py-3 bg-[#e58679] hover:bg-[#d47568] text-white text-sm font-sans tracking-wide rounded-xl shadow-md transition-colors duration-300 active:scale-[0.98]">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      <!-- RIGHT SECTION: RESERVED BLANK SPACE -->
+      <!-- (Perfect for an graphic element, dynamic details, text, or a map layout later) -->
+      <!-- RIGHT SECTION VISUAL PLACEMENT CONTAINER -->
+      <section
+        class="hidden md:flex flex-col items-center justify-center border-l border-gray-800/50 pl-8 min-h-[350px]">
+
+        <!-- Heading Element: Uses !text-white to break the global black text inheritance completely -->
+        <h2 class="text-6xl font-bold tracking-tight !text-white font-sans leading-tight text-center md:text-left">
+          It seems
+          <span class="text-[#e58679] block md:inline">Impossible</span>
+          until it's
+          <span class="text-[#e58679] block md:inline">DONE</span><span class="text-[#e58679]">.</span>
+        </h2>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
